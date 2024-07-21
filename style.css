@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+body {
+    margin: 0;
+    background-color: hsl(222, 26%, 31%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+}
+.calculator {
+    /* font-family: "League Spartan", sans-serif;
+    font-weight: 700; */
+    /* background-color: hsl(224, 36%, 15%); */
+    /* background-color:  hsl(223, 31%, 20%); */
+    border-radius: 15px;
+    max-width: 350px;
+    overflow: hidden;
+}
+.calc-body {
+    background-color:  hsl(223, 31%, 20%);
+    border-radius: 15px;
+}
+#display {
+    background-color:hsl(224, 36%, 15%);
+    color: white;
+    width: 310px;
+    height: 70px;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 32px;
+    text-align: right;
+    border: none;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+button{
+    background-color: #EAE3DB;
+    color:  hsl(221, 14%, 31%);
+    width: 70px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 1px 2px #B2A296;
+    font-size:32px;
+    cursor: pointer;
+}
+.reset , .delete {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 1px 2px hsl(224, 28%, 35%);
+    color:#EAE3DB ;
+}
+.equal {
+    background-color:hsl(6, 63%, 50%);
+    box-shadow: 1px 2px  hsl(6, 70%, 34%);
+    color:#EAE3DB ;
+}
+.reset , .equal {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    width: 140px;
+    height: 50px;
+}
+.key:active{
+    background-color: hsl(30, 25%, 100%);
+}
+.delete:active {
+    background-color: hsl(225, 21%, 70%);
+}
+.reset:active{
+    background-color: hsl(225, 21%, 70%);
+}
+.equal:active {
+    background-color:hsl(6, 63%, 60%);
+}
