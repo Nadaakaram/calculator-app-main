@@ -1,6 +1,23 @@
 
 let display = document.getElementById('display');
-console.log(display);
+let buttons = document.querySelectorAll ('button');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function appendToDisplay(input){
     display.value += input;
@@ -18,10 +35,26 @@ function del(){
 
 
 function calculateResult(){
-    try{
-        display.value = display.value + " = " + eval(display.value);
+        try{
+            let result = Number(eval(display.value));
+
+            if (result === Infinity || result === -Infinity || result === undefined ) {
+                display.value = 'Error : Invalid input!';
+                // alert('Error: Invalid input!');
+            }
+            if (display.value === Nan) {
+                display.value = 'Error : Invalid input!';
+            }
+            else {
+                display.value = result;
+            }
+        } catch(error){
+            display.value = 'Error : Invalid input!';
+            // alert('Error: Invalid input!');
+        }
     }
-    catch(error){
-        display.value = 'Error';
-    }
-}
+
+
+
+
+
