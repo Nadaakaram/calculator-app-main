@@ -4,7 +4,7 @@ let buttons = document.querySelectorAll ('button');
 
 
 
-
+const operation = ['+' , '-', '/' , '*' , '='];
 
 
 
@@ -40,7 +40,6 @@ function calculateResult(){
 
             if (result === Infinity || result === -Infinity || result === undefined ) {
                 display.value = 'Error : Invalid input!';
-                // alert('Error: Invalid input!');
             }
             if (display.value === Nan) {
                 display.value = 'Error : Invalid input!';
@@ -50,7 +49,6 @@ function calculateResult(){
             }
         } catch(error){
             display.value = 'Error : Invalid input!';
-            // alert('Error: Invalid input!');
         }
     }
 
