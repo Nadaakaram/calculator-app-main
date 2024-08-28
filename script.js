@@ -4,20 +4,6 @@ let buttons = document.querySelectorAll ('button');
 
 
 
-const operation = ['+' , '-', '/' , '*' , '='];
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function appendToDisplay(input){
     display.value += input;
@@ -38,10 +24,7 @@ function calculateResult(){
         try{
             let result = Number(eval(display.value));
 
-            if (result === Infinity || result === -Infinity || result === undefined ) {
-                display.value = 'Error : Invalid input!';
-            }
-            if (display.value === Nan) {
+            if (result === Infinity || result === -Infinity || result === undefined || isNaN(result) ) {
                 display.value = 'Error : Invalid input!';
             }
             else {
@@ -51,6 +34,17 @@ function calculateResult(){
             display.value = 'Error : Invalid input!';
         }
     }
+
+function switchTheme() {
+    let themeCss = document.getElementById('theme');
+
+    if (themeCss.getAttribute('href') === 'styletheme1.css') {
+        themeCss.setAttribute('href' , 'styletheme2.css');
+    } else {
+        themeCss.setAttribute('href' , 'styletheme1.css')
+    }
+}
+
 
 
 
